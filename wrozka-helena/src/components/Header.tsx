@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="z-50" style={{ backgroundColor: '#f7f7f7' }}>
       <div className="container-max px-4">
         <nav className="flex items-center justify-between h-16">
           {/* Logo */}

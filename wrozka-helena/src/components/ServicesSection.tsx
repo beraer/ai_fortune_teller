@@ -1,31 +1,33 @@
 const ServicesSection = () => {
   return (
-    <section className="bg-black text-white section-padding">
-      <div className="container-max">
+    <section className="section-padding" style={{ backgroundColor: '#2d3748' }}>
+      <div className="container-max max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="w-8 h-8 mx-auto mb-6">
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
+        <div className="text-center mb-12">
+          <div className="w-20 h-20 mx-auto mb-4">
+            <img
+              src="/images/icons/shiny_star.png"
+              alt="Shiny star icon"
+              className="w-full h-full object-contain"
+            />
           </div>
-          <h2 className="font-playfair text-3xl lg:text-4xl mb-6">
+          <h2 className="font-playfair text-2xl lg:text-3xl mb-4 text-white">
             W czym mogę Ci pomóc?
           </h2>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {/* Love & Relationships */}
-          <div className="space-y-6">
-            <h3 className="font-playfair text-2xl font-semibold">
+          <div className="space-y-4">
+            <h3 className="font-playfair text-lg font-semibold text-white">
               Miłość i relacje
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm">
               Jeśli tęsknisz za prawdziwą bliskością i harmonią w swoim życiu,
               jestem tutaj, aby Ci pomóc. Przyciągnij miłość, na którą zasługujesz.
             </p>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li className="flex items-start">
                 <span className="text-green-400 mr-2">✓</span>
                 Kiedy spotkam miłość swojego życia?
@@ -54,15 +56,15 @@ const ServicesSection = () => {
           </div>
 
           {/* Career & Finance */}
-          <div className="space-y-6">
-            <h3 className="font-playfair text-2xl font-semibold">
+          <div className="space-y-4">
+            <h3 className="font-playfair text-lg font-semibold text-white">
               Kariera i finanse
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm">
               Pomogę Ci odkryć Twoje prawdziwe talenty i potencjał,
               abyś mogła cieszyć się spełnieniem w pracy i życiu osobistym.
             </p>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li className="flex items-start">
                 <span className="text-green-400 mr-2">✓</span>
                 Czy mój obecny zawód jest zgodny z moim przeznaczeniem?
@@ -87,15 +89,15 @@ const ServicesSection = () => {
           </div>
 
           {/* Health & Spiritual Development */}
-          <div className="space-y-6">
-            <h3 className="font-playfair text-2xl font-semibold">
+          <div className="space-y-4">
+            <h3 className="font-playfair text-lg font-semibold text-white">
               Zdrowie i rozwój duchowy
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm">
               Zadbaj o swoje zdrowie i równowagę wewnętrzną. Odkryj nieograniczone
               źródło siły i spokoju, które zawsze było w Tobie.
             </p>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li className="flex items-start">
                 <span className="text-green-400 mr-2">✓</span>
                 Jak mogę poprawić swoje zdrowie fizyczne i psychiczne?
@@ -116,15 +118,15 @@ const ServicesSection = () => {
           </div>
 
           {/* Life Choices & Future */}
-          <div className="space-y-6">
-            <h3 className="font-playfair text-2xl font-semibold">
+          <div className="space-y-4">
+            <h3 className="font-playfair text-lg font-semibold text-white">
               Życiowe wybory i przyszłość
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm">
               Podejmuj decyzje z pewnością siebie i jasnością. Z moim przewodnictwem
               stworzysz przyszłość, o jakiej zawsze marzyłaś.
             </p>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li className="flex items-start">
                 <span className="text-green-400 mr-2">✓</span>
                 Jakie decyzje powinnam podjąć?
@@ -154,8 +156,8 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-12">
-          <button className="bg-white text-black px-8 py-4 rounded font-lato font-medium hover:bg-gray-100 transition-colors">
+        <div className="text-center mt-8">
+          <button className="bg-white text-black px-6 py-3 rounded-xl font-playfair font-medium hover:bg-gray-100 transition-colors">
             Zamów wróżbę
           </button>
         </div>

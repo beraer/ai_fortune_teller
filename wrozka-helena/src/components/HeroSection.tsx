@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import MoonPhases from './MoonPhases';
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
@@ -44,25 +45,25 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-white section-padding">
-      <div className="container-max">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="section-padding" style={{ backgroundColor: '#f7f7f7', paddingTop: '2rem' }}>
+      <div className="container-max max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Text and Form */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="font-playfair text-4xl lg:text-5xl text-gray-900 leading-tight">
+          <div className="space-y-3">
+            <div className="space-y-2">
+              <h1 className="font-playfair text-3xl lg:text-4xl text-gray-900 leading-tight">
                 <em className="italic">Wróżby online</em> — poznaj odpowiedzi na nurtujące Cię pytania
               </h1>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-base leading-relaxed">
                 W 15 minut wyślę Ci wróżbę ze szczegółową odpowiedzią,
                 dzięki której odnajdziesz szczęście i podejmiesz trafne decyzje.
               </p>
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-4 bg-white">
+            <form onSubmit={handleSubmit} className="space-y-3 mt-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Imię:
                 </label>
                 <input
@@ -70,7 +71,7 @@ const HeroSection = () => {
                   id="name"
                   name="name"
                   placeholder="Twoje imię"
-                  className="form-input"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 font-playfair transition-all duration-200"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -78,7 +79,7 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                   Adres e-mail:
                 </label>
                 <input
@@ -86,7 +87,7 @@ const HeroSection = () => {
                   id="email"
                   name="email"
                   placeholder="Twój adres e-mail"
-                  className="form-input"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 font-playfair transition-all duration-200"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -94,7 +95,7 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <label htmlFor="birthDate" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="birthDate" className="block text-sm font-medium text-gray-700 mb-1">
                   Data urodzenia:
                 </label>
                 <input
@@ -102,7 +103,7 @@ const HeroSection = () => {
                   id="birthDate"
                   name="birthDate"
                   placeholder="dd-mm-rrrr"
-                  className="form-input"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 font-playfair transition-all duration-200"
                   value={formData.birthDate}
                   onChange={handleChange}
                   required
@@ -110,15 +111,15 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <label htmlFor="question" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="question" className="block text-sm font-medium text-gray-700 mb-1">
                   Twoje pytanie:
                 </label>
                 <textarea
                   id="question"
                   name="question"
-                  rows={4}
+                  rows={3}
                   placeholder="Wpisz jedno pytanie, na które chcesz otrzymać odpowiedź"
-                  className="form-input resize-none"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 font-playfair resize-none transition-all duration-200"
                   value={formData.question}
                   onChange={handleChange}
                   required
@@ -127,55 +128,60 @@ const HeroSection = () => {
 
               <button
                 type="submit"
-                className="btn-primary w-full text-center"
+                className="w-full text-center flex items-center justify-center space-x-2 mt-4 bg-black text-white px-4 py-2 rounded-xl font-medium hover:bg-gray-800 transition-all duration-200"
               >
-                Zamów wróżbę
+                <span>Zamów wróżbę</span>
+                <img
+                  src="/images/icons/magic-wand.gif"
+                  alt="Magic wand"
+                  className="w-4 h-4 ml-1"
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                />
               </button>
             </form>
 
-            {/* Indicators */}
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-black rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+            {/* Moon Phases aligned with JESTEM ONLINE */}
+            <div className="flex items-center justify-center mt-8">
+              <img
+                src="/images/icons/moon_phase.png"
+                alt="Moon phases"
+                className="w-auto h-3 md:h-4 opacity-60"
+              />
             </div>
           </div>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Image and Text */}
           <div className="relative">
-            <div className="aspect-square relative rounded-lg overflow-hidden">
+            {/* Background Image with soft corners */}
+            <div className="relative rounded-2xl overflow-hidden mb-4">
               <img
-                src="https://ext.same-assets.com/3736986635/277431083.jpeg"
-                alt="Wróżka Helena z kartami Tarota"
-                className="object-cover w-full h-full"
+                src="/images/backgrounds/register_page.png"
+                alt="Mystical background"
+                className="w-full h-auto object-cover"
               />
             </div>
 
             {/* Text overlay */}
-            <div className="mt-6 text-center lg:text-left">
-              <p className="text-gray-600 leading-relaxed">
+            <div className="text-center lg:text-left space-y-3">
+              <p className="text-gray-600 leading-relaxed text-sm">
                 Z tej strony <strong className="font-playfair italic">Wróżka Helena</strong>,
                 Twoja przewodniczka na ścieżce życia i miłości.
               </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
+              <p className="text-gray-600 leading-relaxed text-sm">
                 Od ponad 20 lat pomagam ludziom odkrywać ich prawdziwy potencjał i odnajdywać szczęście.
                 Posiadam dar jasnowidz enia i bogate doświadczenie wróżbiarskie, co pozwala mi na głębokie
                 zrozumienie ludzkich problemów i trafne przewidywanie przyszłości.
               </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
+              <p className="text-gray-600 leading-relaxed text-sm">
                 Jako numerologiczna 11 posiadam wysoką świadomość, intuicję oraz zdolność inspirowania
                 i prowadzenia innych na drodze duchowego rozwoju.
               </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
+              <p className="text-gray-600 leading-relaxed text-sm">
                 Jeśli czujesz się zagubiony, stoisz przed trudnymi wyborami, lub po prostu pragniesz
                 spojrzeć w przyszłość, zapraszam Cię do skorzystania z mojej pomocy.
               </p>
 
-              <div className="mt-6 flex items-center text-green-600">
+              <div className="flex items-center text-green-600 mt-4">
                 <div className="w-2 h-2 bg-green-600 rounded-full mr-2"></div>
                 <span className="text-sm font-medium">JESTEM ONLINE</span>
               </div>
